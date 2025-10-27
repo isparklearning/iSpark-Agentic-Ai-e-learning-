@@ -1,0 +1,75 @@
+.counter-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Vertical alignment */
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.counter-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.counter-icon {
+  font-size: 2.5rem;
+  color: #5a86ff;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.counter-card:hover .counter-icon {
+  color: #2f54f4;
+  transform: scale(1.1);
+}
+
+.counter-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+.counter-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counter-card {
+    width: 140px;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-section {
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  .counter-card {
+    width: 120px;
+  }
+}

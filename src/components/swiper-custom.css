@@ -1,0 +1,20 @@
+/* ✅ Reduce size of Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 28px; /* smaller clickable area */
+  height: 28px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px; /* smaller arrow icon */
+  color: #4f46e5; /* indigo-600 to match theme */
+}
+
+/* ✅ Move arrows slightly closer to content */
+.swiper-button-prev {
+  left: 5px;
+}
+.swiper-button-next {
+  right: 5px;
+}
