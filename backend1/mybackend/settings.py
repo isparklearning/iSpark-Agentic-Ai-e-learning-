@@ -138,5 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "i-spark-agentic-ai-e-learning-bao2.vercel.app",
+    "https://i-spark-agentic-ai-e-learning-bao2.vercel.app/",  
 ]
