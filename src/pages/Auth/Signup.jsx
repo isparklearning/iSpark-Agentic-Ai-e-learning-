@@ -97,7 +97,7 @@ const Signup = () => {
 
     try {
       const response = await fetch(
-        "i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/signup/",
+        "https://i-spark-agentic-ai-e-learning-bao2.vercel.app/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

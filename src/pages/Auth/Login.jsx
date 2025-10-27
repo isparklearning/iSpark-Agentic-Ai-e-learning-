@@ -22,7 +22,7 @@ const Login = () => {
     const password = e.target.password.value;
 
     try {
-      const response = await fetch("i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/login/", {
+      const response = await fetch("https://i-spark-agentic-ai-e-learning-bao2.vercel.app/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }), // backend expects only username & password
