@@ -19,7 +19,7 @@ import ISparkVTU from './components/ISparkVTU.jsx';
 import SuccessStories from "./components/SuccessStories.jsx";
 import CybersecurityCourses from './pages/courses/CyberSecurityCourses.jsx';
 import InternshipCurriculum from './components/internship/InternshipCurriculum.jsx';
-import Internpage from './components/internship/internpage.jsx';
+import Internpage from './components/internship/Internpage.jsx';
 // ✅ Make sure these components exist or comment them out for now
 // import StemLab from './components/products/StemLab';
 // import VtuLab from './components/products/VtuLab';
