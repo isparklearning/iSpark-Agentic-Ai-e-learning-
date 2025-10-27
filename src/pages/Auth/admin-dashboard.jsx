@@ -131,7 +131,7 @@ const AdminDashboard = () => {
     async function fetchData() {
       try {
         // Fetch pending users
-        const usersRes = await fetch('http://127.0.0.1:8001/api/accounts/pending-users/');
+        const usersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/pending-users/');
         if (usersRes.ok) {
           const usersData = await usersRes.json();
           setUsers(Array.isArray(usersData) ? usersData : []);
@@ -139,14 +139,14 @@ const AdminDashboard = () => {
         }
 
         // Fetch active users
-        const activeUsersRes = await fetch('http://127.0.0.1:8001/api/accounts/active-users/');
+        const activeUsersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/active-users/');
         if (activeUsersRes.ok) {
           const activeUsersData = await activeUsersRes.json();
           setActiveUsers(Array.isArray(activeUsersData) ? activeUsersData : []);
         }
 
         // Fetch all users
-        const allUsersRes = await fetch('http://127.0.0.1:8001/api/accounts/all-users/');
+        const allUsersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/all-users/');
         if (allUsersRes.ok) {
           const allUsersData = await allUsersRes.json();
           setAllUsers(Array.isArray(allUsersData) ? allUsersData : []);
@@ -188,14 +188,14 @@ const AdminDashboard = () => {
   // Approve user function
   const approveUser = async (id) => {
     try {
-      await fetch(`http://127.0.0.1:8001/api/accounts/approve/${id}/`, {
+      await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/approve/${id}/`, {
         method: 'POST'
       });
       setUsers(users.filter(u => u.id !== id));
       setStats(prev => ({ ...prev, pendingApprovals: prev.pendingApprovals - 1 }));
       
       // Refresh active users
-      const activeUsersRes = await fetch('http://127.0.0.1:8001/api/accounts/active-users/');
+      const activeUsersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/active-users/');
       if (activeUsersRes.ok) {
         const activeUsersData = await activeUsersRes.json();
         setActiveUsers(Array.isArray(activeUsersData) ? activeUsersData : []);
@@ -218,7 +218,7 @@ const AdminDashboard = () => {
         setRejectedUsers(prev => [...prev, rejectedUser]);
       }
       
-      await fetch(`http://127.0.0.1:8001/api/accounts/reject/${id}/`, {
+      await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/reject/${id}/`, {
         method: 'POST'
       });
       setUsers(users.filter(u => u.id !== id));
@@ -231,7 +231,7 @@ const AdminDashboard = () => {
   // Approve rejected user function
   const handleApproveUser = async (id) => {
     try {
-      await fetch(`http://127.0.0.1:8001/api/accounts/approve/${id}/`, {
+      await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/approve/${id}/`, {
         method: 'POST'
       });
       setRejectedUsers(prevRejected => {
@@ -256,7 +256,7 @@ const AdminDashboard = () => {
       const newStatus = user.is_active === 1 ? 0 : 1;
       
       // Call the API to update the user status
-      const res = await fetch(`http://127.0.0.1:8001/api/accounts/toggle-status/${id}/`, {
+      const res = await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/toggle-status/${id}/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -363,7 +363,7 @@ const AdminDashboard = () => {
     
     setIsAddingUser(true);
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/accounts/add-user/', {
+      const response = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/add-user/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -377,7 +377,7 @@ const AdminDashboard = () => {
         console.log('New user from server:', newUserFromServer);
         
         // Refresh the user list to ensure we have the latest data
-        const allUsersRes = await fetch('http://127.0.0.1:8001/api/accounts/all-users/');
+        const allUsersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/all-users/');
         if (allUsersRes.ok) {
           const allUsersData = await allUsersRes.json();
           setAllUsers(Array.isArray(allUsersData) ? allUsersData : []);
@@ -471,7 +471,7 @@ const AdminDashboard = () => {
     
     setIsEditing(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/accounts/update-user/${currentUser.id}/`, {
+      const response = await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/update-user/${currentUser.id}/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -482,7 +482,7 @@ const AdminDashboard = () => {
 
       if (response.ok) {
         // Refresh the user list to ensure we have the latest data
-        const allUsersRes = await fetch('http://127.0.0.1:8001/api/accounts/all-users/');
+        const allUsersRes = await fetch('i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/all-users/');
         if (allUsersRes.ok) {
           const allUsersData = await allUsersRes.json();
           setAllUsers(Array.isArray(allUsersData) ? allUsersData : []);
@@ -579,7 +579,7 @@ const AdminDashboard = () => {
     
     setIsEditingProfile(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/accounts/update-profile/${user.id}/`, {
+      const response = await fetch(`i-spark-agentic-ai-e-learning-bao2.vercel.app/api/accounts/update-profile/${user.id}/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
