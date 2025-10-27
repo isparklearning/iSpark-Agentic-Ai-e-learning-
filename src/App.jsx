@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import CoursesSection from "./components/courses/Courses.jsx";
 // Components & Pages
-import LandingPage from './components/Landing/LandingPage.jsx';
+import LandingPage from './components/landing/LandingPage.jsx';
 import AICourses from './pages/courses/AICourses.jsx';
 import RoboticsCourses from './pages/courses/RoboticsCourses.jsx';
 import UGCourses from './pages/courses/UGCourses.jsx';
@@ -29,10 +29,10 @@ import ZoomLive from './components/ZoomLive.jsx';
 // Corrected import paths without .jsx extension
 import StudentDashboard from "./pages/Auth/student-dashboard.jsx";
 import TeacherDashboard from "./pages/Auth/trainer-dashboard.jsx";
-import Liveclassviewer from './components/LiveClassViewer.jsx';
+import Liveclassviewer from './components/Liveclassviewer.jsx';
 import AdminDashboard from './pages/Auth/admin-dashboard.jsx';
-import ForgotPassword from './pages/auth/ForgotPassword.jsx';
-import ResetPassword from './pages/auth/ResetPassword.jsx';
+import ForgotPassword from './pages/Auth/ForgotPassword.jsx';
+import ResetPassword from './pages/Auth/ResetPassword.jsx';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
